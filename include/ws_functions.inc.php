@@ -61,7 +61,7 @@ function ws_images_addPicasa($params, &$service)
   $photo = array(
     'id' => $params['id'],
     'url' => $photoEntry->mediaGroup->content[0]->url,
-    'title' => $photoEntry->mediagroup->title->text,
+    'title' => get_filename_wo_extension($photoEntry->mediagroup->title->text),
     'author' => $photoEntry->mediaGroup->credit[0]->text,
     'description' => $photoEntry->mediagroup->description->text,
     'tags' => $photoEntry->mediagroup->keywords->text,
@@ -102,8 +102,8 @@ SELECT id FROM '.CATEGORIES_TABLE.'
       $albumEntry = $picasa->getAlbumEntry($query);
       
       $category = array(
-        'name' => $albumEntry->mediaGroup->title->text.' <!-- picasa-'.$params['pwa_album'].' -->',
-        'comment' => $albumEntry->mediaGroup->description->text,
+        'name' => pwg_db_real_escape_string($albumEntry->mediaGroup->title->text).' <!-- picasa-'.$params['pwa_album'].' -->',
+        'comment' => pwg_db_real_escape_string($albumEntry->mediaGroup->description->text),
         'parent' => 0,
         );
   
@@ -126,10 +126,10 @@ SELECT id FROM '.CATEGORIES_TABLE.'
     $params['fills'] = explode(',', $params['fills']);
   
     $updates = array();
-    if (in_array('fill_name', $params['fills']))        $updates['name'] = $photo['title']; 
+    if (in_array('fill_name', $params['fills']))        $updates['name'] = pwg_db_real_escape_string($photo['title']); 
     if (in_array('fill_taken', $params['fills']))       $updates['date_creation'] = date('Y-d-m H:i:s', $photo['timestamp']);
-    if (in_array('fill_author', $params['fills']))      $updates['author'] = $photo['author'];
-    if (in_array('fill_description', $params['fills'])) $updates['comment'] = $photo['description'];
+    if (in_array('fill_author', $params['fills']))      $updates['author'] = pwg_db_real_escape_string($photo['author']);
+    if (in_array('fill_description', $params['fills'])) $updates['comment'] = pwg_db_real_escape_string($photo['description']);
     
     if (count($updates))
     {
