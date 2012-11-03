@@ -19,7 +19,7 @@ $lang['List pictures of this album'] = 'Lister les photos de cet album';
 $lang['Begin transfer'] = 'Commencer le transfert';
 $lang['Open Google page in a new tab'] = 'Ouvrir la page Google dans un nouvel onglet';
 $lang['No download method available'] = 'Aucune méthode de téléchargement n\'est disponible';
-$lang['Logued out'] = 'Déconnecté';
+$lang['Logged out'] = 'Déconnecté';
 $lang['%d elements ready for importation'] = '%d elements prêts à l\'importation';
 
 ?>

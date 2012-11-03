@@ -72,7 +72,7 @@ switch ($_GET['action'])
       );
     unset($_SESSION['gdata_auth_token']);
     
-    $_SESSION['page_infos'][] = l10n('Logued out');
+    $_SESSION['page_infos'][] = l10n('Logged out');
     redirect(PICASA_WA_ADMIN . '-import');
     break;
   }
