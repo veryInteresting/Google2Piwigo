@@ -12,9 +12,9 @@ if (!defined('PHPWG_ROOT_PATH')) die('Hacking attempt!');
 
 global $conf;
 
-define('PICASA_WA_PATH', PHPWG_PLUGINS_PATH . basename(dirname(__FILE__)) . '/');
+define('PICASA_WA_PATH',  PHPWG_PLUGINS_PATH . basename(dirname(__FILE__)) . '/');
 define('PICASA_WA_ADMIN', get_root_url() . 'admin.php?page=plugin-' . basename(dirname(__FILE__)));
-define('PICASA_WA_CACHE', $conf['data_location'].'picasa_wa_cache/');
+define('PICASA_WA_CACHE', PHPWG_ROOT_PATH . $conf['data_location'] . 'picasa_wa_cache/');
 
 
 add_event_handler('get_admin_plugin_menu_links', 'picasa_wa_admin_menu');

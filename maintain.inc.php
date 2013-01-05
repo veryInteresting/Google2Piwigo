@@ -6,14 +6,24 @@ function plugin_install()
 {
   global $conf;
   
-  mkdir($conf['data_location'].'picasa_wa_cache/', 0755);
+  mkgetdir(PHPWG_ROOT_PATH . $conf['data_location'] . 'picasa_wa_cache/', MKGETDIR_DEFAULT&~MKGETDIR_DIE_ON_ERROR);
+}
+
+function plugin_activate()
+{
+  global $conf;
+  
+  if (!file_exists(PHPWG_ROOT_PATH . $conf['data_location'] . 'picasa_wa_cache/'))
+  {
+    mkgetdir(PHPWG_ROOT_PATH . $conf['data_location'] . 'picasa_wa_cache/', MKGETDIR_DEFAULT&~MKGETDIR_DIE_ON_ERROR);
+  }
 }
 
 function plugin_uninstall() 
 {
   global $conf;
   
-  rrmdir($conf['data_location'].'picasa_wa_cache/');
+  rrmdir(PHPWG_ROOT_PATH . $conf['data_location'] . 'picasa_wa_cache/');
 }
 
 function rrmdir($dir)
