@@ -127,7 +127,7 @@ SELECT id FROM '.CATEGORIES_TABLE.'
   
     $updates = array();
     if (in_array('fill_name', $params['fills']))        $updates['name'] = pwg_db_real_escape_string($photo['title']); 
-    if (in_array('fill_taken', $params['fills']))       $updates['date_creation'] = date('Y-d-m H:i:s', $photo['timestamp']);
+    if (in_array('fill_taken', $params['fills']))       $updates['date_creation'] = date('Y-m-d H:i:s', $photo['timestamp']);
     if (in_array('fill_author', $params['fills']))      $updates['author'] = pwg_db_real_escape_string($photo['author']);
     if (in_array('fill_description', $params['fills'])) $updates['comment'] = pwg_db_real_escape_string($photo['description']);
     
