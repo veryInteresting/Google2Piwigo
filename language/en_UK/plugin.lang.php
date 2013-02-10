@@ -1,6 +1,6 @@
 <?php
 
-$lang['Successfully logued to you Google account'] = 'Successfully logued to you Google account';
+$lang['Successfully logued to you Google account'] = 'Successfully logged in to your Google account';
 $lang['One picture is not displayed because already existing in the database.'] = 'One picture is not displayed because already existing in the database.';
 $lang['%d pictures are not displayed because already existing in the database.'] = '%d pictures are not displayed because already existing in the database.';
 $lang['%d pictures imported'] = '%d pictures imported';
