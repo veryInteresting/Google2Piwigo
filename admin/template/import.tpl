@@ -1,12 +1,26 @@
 {combine_css path=$PICASA_WA_PATH|@cat:"admin/template/style.css"}
 
+{footer_script}{literal}
+$("input.login").click(function() {
+  window.location.href = "{/literal}{$picasa_login}{literal}";
+});
+$(".login_help").click(function() {
+  $(".infos.tip").slideToggle();
+});
+{/literal}{/footer_script}
+
 <div class="titrePage">
 	<h2>Google2Piwigo</h2>
 </div>
 
 {* <!-- LOGIN --> *}
 {if $ACTION == 'login'}
-<p><input type="submit" onClick="javascript:window.location.href ='{$picasa_login}';" value="{'Login'|@translate}"></p>
+<p><input type="submit" class="login" value="{'Login'|@translate}"></p>
+<p><a href="#" class="login_help">{'Help! I get the error "The site [...] has not been registered."'|@translate}</a></p>
+
+<div class="infos tip" style="display:none;">
+{$HELP_CONTENT}
+</div>
 
 {* <!-- MAIN MENU --> *}
 {elseif $ACTION == 'main'}

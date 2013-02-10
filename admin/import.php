@@ -51,7 +51,10 @@ switch ($_GET['action'])
       false, true
       );
         
-    $template->assign('picasa_login', $login_url);
+    $template->assign(array(
+      'picasa_login' => $login_url,
+      'HELP_CONTENT' => load_language('help.lang.html', PICASA_WA_PATH, array('return'=>true)),
+      ));
     break;
   }
   
