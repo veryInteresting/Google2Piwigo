@@ -36,6 +36,6 @@ $lang['One picture is not displayed because already existing in the database.'] 
 $lang['Open Google page in a new tab'] = 'ανοίξτε τη σελίδα του Google σε νέα καρτέλα';
 $lang['Processing...'] = 'Επεξεργασία ...';
 $lang['Reproduce Google albums'] = 'Αναπαραγωγή λευκώματος Google ';
-$lang['Successfully logued to you Google account'] = 'Συνδεθήκατε επιτυχώς στο Google λογαριασμό σας';
+$lang['Successfully logged to you Google account'] = 'Συνδεθήκατε επιτυχώς στο Google λογαριασμό σας';
 $lang['%d elements ready for importation'] = '%d στοιχεία έτοιμα για την εισαγωγή';
 ?>

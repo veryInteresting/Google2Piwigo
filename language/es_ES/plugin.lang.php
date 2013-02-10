@@ -37,6 +37,7 @@ $lang['Open Google page in a new tab'] = 'Abra la página de Google en una nueva
 $lang['Please fill your API keys on the configuration tab'] = 'Por favor, rellene sus claves de la API en la pestaña de configuración';
 $lang['Processing...'] = 'Procesando...';
 $lang['Reproduce Google albums'] = 'Reproducir álbumes de Google';
-$lang['Successfully logued to you Google account'] = 'Logueado con éxito en su cuenta de Google';
+$lang['Successfully logged to you Google account'] = 'Logueado con éxito en su cuenta de Google';
 $lang['%d elements ready for importation'] = '%d elementos listos para importar';
+$lang['Logged in as'] = 'Registrado como';
 ?>

@@ -23,7 +23,7 @@
 $lang['One picture is not displayed because already existing in the database.'] = 'Одне зображення не відображається, тому що вже існує в базі даних.';
 $lang['Processing...'] = 'Обробка...';
 $lang['Reproduce Google albums'] = 'Відтворити Google альбоми';
-$lang['Successfully logued to you Google account'] = 'Успішно увійшли до вашого облікового запису Google';
+$lang['Successfully logged to you Google account'] = 'Успішно увійшли до вашого облікового запису Google';
 $lang['(%d photos)'] = '(%d зображень)';
 $lang['Begin transfer'] = 'Почати передачу';
 $lang['Fill these fields from Google datas'] = 'Заповніть ці поля з даних Google';

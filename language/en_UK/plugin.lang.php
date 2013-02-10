@@ -1,6 +1,6 @@
 <?php
 
-$lang['Successfully logued to you Google account'] = 'Successfully logged in to your Google account';
+$lang['Successfully logged to you Google account'] = 'Successfully logged to you Google account';
 $lang['One picture is not displayed because already existing in the database.'] = 'One picture is not displayed because already existing in the database.';
 $lang['%d pictures are not displayed because already existing in the database.'] = '%d pictures are not displayed because already existing in the database.';
 $lang['%d pictures imported'] = '%d pictures imported';
@@ -21,5 +21,7 @@ $lang['Open Google page in a new tab'] = 'Open Google page in a new tab';
 $lang['No download method available'] = 'No download method available';
 $lang['Logged out'] = 'Logged out';
 $lang['%d elements ready for importation'] = '%d elements ready for importation';
+$lang['Geolocalization'] = 'Geolocalization';
+$lang['Logged in as'] = 'Logged in as';
 
 ?>

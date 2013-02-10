@@ -12,7 +12,7 @@ function picasa_wa_add_ws_method($arr)
       'id' => array(),
       'pwa_album' => array(),
       'category' => array(),
-      'fills' => array('default' =>null),
+      'fills' => array('default' => 'fill_name,fill_author,fill_tags,fill_date,fill_description'),
       ),
     'Used by Picasa Web Albums'
     );
@@ -25,7 +25,7 @@ function ws_images_addPicasa($params, &$service)
     return new PwgError(401, 'Forbidden');
   }
   
-  global $conf;
+  global $conf, $pwg_loaded_plugins;
   
   include_once(PHPWG_ROOT_PATH . 'admin/include/functions.php');
   include_once(PHPWG_ROOT_PATH . 'admin/include/functions_upload.inc.php');
@@ -56,20 +56,25 @@ function ws_images_addPicasa($params, &$service)
   $query->setAlbumId($params['pwa_album']);
   $query->setPhotoId($params['id']);
   $query->setImgMax('d');
-  $photoEntry = $picasa->getPhotoFeed($query);
-   
+  $photoEntry = $picasa->getPhotoEntry($query);
+  
   $photo = array(
-    'id' => $params['id'],
-    'url' => $photoEntry->mediaGroup->content[0]->url,
-    'title' => get_filename_wo_extension($photoEntry->mediagroup->title->text),
-    'author' => $photoEntry->mediaGroup->credit[0]->text,
-    'description' => $photoEntry->mediagroup->description->text,
-    'tags' => $photoEntry->mediagroup->keywords->text,
-    'timestamp' => substr($photoEntry->gphotoTimestamp->text, 0, -3),
+    'id' =>           $params['id'],
+    'url' =>          $photoEntry->getMediaGroup()->content[0]->getUrl(),
+    'title' =>        get_filename_wo_extension($photoEntry->getMediaGroup()->getTitle()->getText()),
+    'author' =>       $photoEntry->getMediaGroup()->credit[0]->getText(),
+    'description' =>  $photoEntry->getMediaGroup()->getDescription()->getText(),
+    'tags' =>         $photoEntry->getMediaGroup()->getKeywords()->getText(),
+    'timestamp' =>    substr($photoEntry->getGphotoTimestamp(), 0, -3),
+    'latlon' =>       null,
     );
+  
   $photo['path'] = PICASA_WA_CACHE . 'picasa-'.$photo['id'].'.'.get_extension($photo['url']);
   
-  file_put_contents('dump.txt', print_r($photo, true), FILE_APPEND);
+  if ($photoEntry->getGeoRssWhere() !== null && !empty($pwg_loaded_plugins['rv_gmaps']))
+  {
+    $photo['latlon'] = $photoEntry->getGeoRssWhere()->getPoint()->getPos()->getText();
+  }
   
   // copy file
   $ti = microtime(true);
@@ -127,9 +132,18 @@ SELECT id FROM '.CATEGORIES_TABLE.'
   
     $updates = array();
     if (in_array('fill_name', $params['fills']))        $updates['name'] = pwg_db_real_escape_string($photo['title']); 
-    if (in_array('fill_taken', $params['fills']))       $updates['date_creation'] = date('Y-m-d H:i:s', $photo['timestamp']);
+    if (in_array('fill_date', $params['fills']))        $updates['date_creation'] = date('Y-m-d H:i:s', $photo['timestamp']);
     if (in_array('fill_author', $params['fills']))      $updates['author'] = pwg_db_real_escape_string($photo['author']);
     if (in_array('fill_description', $params['fills'])) $updates['comment'] = pwg_db_real_escape_string($photo['description']);
+    if (in_array('fill_geotag', $params['fills']) and !empty($photo['latlon']) )
+    {
+      $latlon = explode(' ', $photo['latlon']);
+      if (count($latlon) == 2)
+      {
+        $updates['lat'] = pwg_db_real_escape_string($latlon[0]);
+        $updates['lon'] = pwg_db_real_escape_string($latlon[1]);
+      }
+    }
     
     if (count($updates))
     {

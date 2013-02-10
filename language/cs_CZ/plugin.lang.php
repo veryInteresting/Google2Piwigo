@@ -37,4 +37,5 @@ $lang['One picture is not displayed because already existing in the database.'] 
 $lang['Open Google page in a new tab'] = 'Otevřít stránku Google v novém tabu';
 $lang['Processing...'] = 'Zpracovávání...';
 $lang['Reproduce Google albums'] = 'Vytvořit Google alba';
+$lang['Logged in as'] = 'Přihlášen jako';
 ?>

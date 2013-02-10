@@ -22,7 +22,7 @@ else
   if (!empty($_GET['token']))
   {
     $_SESSION['gdata_auth_token'] = Zend_Gdata_AuthSub::getAuthSubSessionToken($_GET['token']);
-    $_GET['action'] = 'logued';
+    $_GET['action'] = 'logged';
   }
   
   // authentication
@@ -46,7 +46,7 @@ switch ($_GET['action'])
   case 'login':
   {
     $login_url = Zend_Gdata_AuthSub::getAuthSubTokenUri(
-      get_absolute_root_url().PICASA_WA_ADMIN . '-import',
+      get_absolute_root_url() . PICASA_WA_ADMIN . '-import',
       'https://picasaweb.google.com/data', 
       false, true
       );
@@ -59,9 +59,9 @@ switch ($_GET['action'])
   }
   
   // message after login
-  case 'logued':
+  case 'logged':
   {
-    $_SESSION['page_infos'][] = l10n('Successfully logued to you Google account');
+    $_SESSION['page_infos'][] = l10n('Successfully logged to you Google account');
     redirect(PICASA_WA_ADMIN . '-import');
     break;
   }
@@ -84,9 +84,10 @@ switch ($_GET['action'])
   case 'main':
   {
     $template->assign(array(
-      'logout_url' => PICASA_WA_ADMIN . '-import&amp;action=logout',
+      'username' => $picasa->getUserEntry( $picasa->newUserQuery() )->getGphotoNickname()->getText(),
+      'logout_url' =>      PICASA_WA_ADMIN . '-import&amp;action=logout',
       'list_albums_url' => PICASA_WA_ADMIN . '-import&amp;action=list_albums',
-      'import_all_url' => PICASA_WA_ADMIN . '-import&amp;action=list_all',
+      'import_all_url' =>  PICASA_WA_ADMIN . '-import&amp;action=list_all',
       ));
     break;
   }
@@ -101,10 +102,10 @@ switch ($_GET['action'])
     foreach ($userFeed as $userEntry)
     {
       array_push($albums, array(
-        'title' => $userEntry->title->text,
+        'title' =>       $userEntry->title->text,
         'description' => $userEntry->mediaGroup->description->text,
-        'photos' => $userEntry->gphotoNumPhotos->text,
-        'U_LIST' => PICASA_WA_ADMIN . '-import&amp;action=list_photos&amp;album='.$userEntry->gphotoId->text,
+        'photos' =>      $userEntry->gphotoNumPhotos->text,
+        'U_LIST' => PICASA_WA_ADMIN . '-import&amp;action=list_photos&amp;album=' . $userEntry->gphotoId->text,
         ));
     }
     
@@ -138,11 +139,11 @@ switch ($_GET['action'])
     foreach ($albumFeed as $albumEntry)
     {
       array_push($all_photos, array(
-        'id' => $albumEntry->getGphotoId()->getText(),
-        'name' => $albumEntry->mediaGroup->title->text,
+        'id' =>    $albumEntry->getGphotoId()->getText(),
+        'name' =>  $albumEntry->mediaGroup->title->text,
         'thumb' => $albumEntry->mediaGroup->thumbnail[1]->url,
-        'src' => $albumEntry->mediaGroup->content[0]->url,
-        'url' => $albumEntry->link[2]->href,
+        'src' =>   $albumEntry->mediaGroup->content[0]->url,
+        'url' =>   $albumEntry->link[2]->href,
         ));
     }
     
@@ -168,7 +169,11 @@ SELECT id, file
     
     if ($duplicates>0)
     {
-      array_push($page['infos'], l10n_dec('One picture is not displayed because already existing in the database.', '%d pictures are not displayed because already existing in the database.', $duplicates));
+      array_push($page['infos'], l10n_dec(
+          'One picture is not displayed because already existing in the database.', 
+          '%d pictures are not displayed because already existing in the database.',
+          $duplicates
+        ));
     }
     
     // displayed photos
@@ -176,13 +181,13 @@ SELECT id, file
     $all_elements = array_map(create_function('$p', 'return  \'"\'.$p["id"].\'"\';'), $all_photos);
   
     $template->assign(array(
-      'nb_thumbs_set' => count($all_photos),
+      'nb_thumbs_set' =>  count($all_photos),
       'nb_thumbs_page' => count($page_photos),
-      'thumbnails' => $page_photos,
-      'all_elements' => $all_elements,
-      'album' => $_GET['album'],
-      'F_ACTION' => PICASA_WA_ADMIN.'-import&amp;action=import_set',
-      'U_DISPLAY' => $self_url,
+      'thumbnails' =>     $page_photos,
+      'all_elements' =>   $all_elements,
+      'album' =>          $_GET['album'],
+      'F_ACTION' =>       PICASA_WA_ADMIN.'-import&amp;action=import_set',
+      'U_DISPLAY' =>      $self_url,
       ));
       
     // get piwigo categories
@@ -256,13 +261,17 @@ SELECT id, file
     
     if ($duplicates>0)
     {
-      array_push($page['infos'], l10n_dec('%d picture is not displayed because already existing in the database.', '%d pictures are not displayed because already existing in the database.', $duplicates));
+      array_push($page['infos'], l10n_dec(
+          '%d picture is not displayed because already existing in the database.', 
+          '%d pictures are not displayed because already existing in the database.', 
+          $duplicates
+        ));
     }
     
     $template->assign(array(
-      'nb_elements' => count($all_photos),
+      'nb_elements' =>  count($all_photos),
       'all_elements' => json_encode($all_photos),
-      'F_ACTION' => PICASA_WA_ADMIN . '-import&amp;action=import_set',
+      'F_ACTION' =>     PICASA_WA_ADMIN . '-import&amp;action=import_set',
       ));
       
     // get piwigo categories
@@ -286,8 +295,11 @@ SELECT id, name, uppercats, global_rank
 }
 
 
-$template->assign('ACTION', $_GET['action']);
+$template->assign(array(
+  'ACTION' => $_GET['action'],
+  'GMAPS_LOADED' => !empty($pwg_loaded_plugins['rv_gmaps']),
+  ));
 
-$template->set_filename('picasa_web_albums', dirname(__FILE__) . '/template/import.tpl');
+$template->set_filename('picasa_web_albums', realpath(PICASA_WA_PATH . '/admin/template/import.tpl'));
 
 ?>

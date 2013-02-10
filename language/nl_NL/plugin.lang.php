@@ -37,5 +37,6 @@ $lang['One picture is not displayed because already existing in the database.'] 
 $lang['Open Google page in a new tab'] = 'Open de Google pagina in een nieuwe tab';
 $lang['Processing...'] = 'Bewerken ...';
 $lang['Reproduce Google albums'] = 'Reproduceer Google albums';
-$lang['Successfully logued to you Google account'] = 'Succesvol ingelogd in Google ';
+$lang['Successfully logged to you Google account'] = 'Succesvol ingelogd in Google ';
+$lang['Logged in as'] = 'Ingelogd als';
 ?>

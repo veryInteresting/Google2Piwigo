@@ -21,7 +21,7 @@ if (!function_exists('test_remote_download'))
  * @param: string source url
  * @param: mixed destination file (if true, file content is returned)
  */
-function picasa_wa_download_remote_file($src, $dest)
+function picasa_wa_download_remote_file($src, $dest, $headers=array())
 {
   if (empty($src))
   {
@@ -29,6 +29,8 @@ function picasa_wa_download_remote_file($src, $dest)
   }
   
   $return = ($dest === true) ? true : false;
+  
+  array_push($headers, 'Accept-language: en');
   
   /* curl */
   if (function_exists('curl_init'))
@@ -41,11 +43,14 @@ function picasa_wa_download_remote_file($src, $dest)
     
     curl_setopt($ch, CURLOPT_URL, $src);
     curl_setopt($ch, CURLOPT_HEADER, false);
-    curl_setopt($ch, CURLOPT_HTTPHEADER, array("Accept-language: en"));
+    curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
     curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1)');
-    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
-    curl_setopt($ch, CURLOPT_MAXREDIRS, 1);
     curl_setopt($ch, CURLOPT_TIMEOUT, 30);
+    if (!ini_get('safe_mode'))
+    {
+      curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+      curl_setopt($ch, CURLOPT_MAXREDIRS, 1);
+    }
     if (strpos($src, 'https://') !== false)
     {
       curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
@@ -86,7 +91,7 @@ function picasa_wa_download_remote_file($src, $dest)
       'http' => array(
         'method' => "GET",
         'user_agent' => 'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1)',
-        'header' => "Accept-language: en",
+        'header' => implode("\r\n", $headers),
       )
     );
 

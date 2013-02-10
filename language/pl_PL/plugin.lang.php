@@ -36,7 +36,8 @@ $lang['One picture is not displayed because already existing in the database.'] 
 $lang['Open Google page in a new tab'] = 'Otwórz Google w nowej zakładce';
 $lang['Processing...'] = 'Przetwarzanie...';
 $lang['Reproduce Google albums'] = 'Odbuduj albumy Google';
-$lang['Successfully logued to you Google account'] = 'Udane logowanie do Google';
+$lang['Successfully logged to you Google account'] = 'Udane logowanie do Google';
+$lang['Logged in as'] = 'Zalogowany jako';
 $lang['%d elements ready for importation'] = '%d elementów gotowych do importu';
 $lang['API not authenticated'] = 'API nieuwierzytelnione';
 $lang['Logged out'] = 'Wylogowany';

@@ -119,8 +119,9 @@ $(document).ready(function() {
       <label><input type="checkbox" name="fill_name" checked="checked"> {'Photo name'|@translate}</label>
       <label><input type="checkbox" name="fill_author" checked="checked"> {'Author'|@translate}</label>
       <label><input type="checkbox" name="fill_tags" checked="checked"> {'Tags'|@translate}</label>
-      <label><input type="checkbox" name="fill_taken" checked="checked"> {'Creation date'|@translate}</label>
+      <label><input type="checkbox" name="fill_date" checked="checked"> {'Creation date'|@translate}</label>
       <label><input type="checkbox" name="fill_description" checked="checked"> {'Description'|@translate}</label>
+      {if $GMAPS_LOADED}<label><input type="checkbox" name="fill_geotag" checked="checked"> {'Geolocalization'|@translate}</label>{/if}
     </p>
     
     <p>

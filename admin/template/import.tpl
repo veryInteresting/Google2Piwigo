@@ -34,6 +34,7 @@ jQuery('.load').click(function() {
 {/literal}{/footer_script}
 
 <p>
+  <b>{'Logged in as'|@translate}</b> : {$username}<br><br>
   <input type="submit" data="{$logout_url}" value="{'Logout'|@translate}">
 </p>
 <br>

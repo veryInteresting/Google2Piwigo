@@ -37,6 +37,7 @@ $lang['One picture is not displayed because already existing in the database.'] 
 $lang['Open Google page in a new tab'] = 'Abrir a página Google noutra folha';
 $lang['Processing...'] = 'Processando...';
 $lang['Reproduce Google albums'] = 'Reproduzir albuns Google';
-$lang['Successfully logued to you Google account'] = 'Entrou com sucesso na sua conta Google';
+$lang['Successfully logged to you Google account'] = 'Entrou com sucesso na sua conta Google';
 $lang['%d elements ready for importation'] = '%d elementos prontos para a importação ';
+$lang['Logged in as'] = 'Entrou como';
 ?>

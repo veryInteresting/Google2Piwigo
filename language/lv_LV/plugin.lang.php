@@ -37,5 +37,6 @@ $lang['Open Google page in a new tab'] = 'Atvērt Google lapu jaunā cilnē';
 $lang['Please fill your API keys on the configuration tab'] = 'Lūdzu ieraksties savas API atslēgas konfigurācijas cilnē';
 $lang['Processing...'] = 'Apstrāde...';
 $lang['Reproduce Google albums'] = 'Reproducēt Google albūmus';
-$lang['Successfully logued to you Google account'] = 'Esat veiksmīgi pieteikušies savā Google kontā';
+$lang['Successfully logged to you Google account'] = 'Esat veiksmīgi pieteikušies savā Google kontā';
+$lang['Logged in as'] = 'Pieteicies kā';
 ?>
