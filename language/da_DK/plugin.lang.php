@@ -41,4 +41,7 @@ $lang['Open Google page in a new tab'] = 'Åbn Google-side i et nyt faneblad';
 $lang['Photo "%s" imported'] = 'Fotografieret "%s" blev importeret';
 $lang['Processing...'] = 'Behandler ...';
 $lang['Reproduce Google albums'] = 'Reproducer Google-albummer';
+$lang['Geolocalization'] = 'Geolokalisering';
+$lang['Logged in as'] = 'Logget ind som';
+$lang['Successfully logged to you Google account'] = 'Loggede på din Google-konto';
 ?>
