@@ -38,4 +38,9 @@ $lang['%d albums'] = '%d альбоми';
 $lang['%d pictures are not displayed because already existing in the database.'] = '%d малюнки не відображаються, оскільки вже існують в базі даних.';
 $lang['%d pictures imported'] = '%d імпортованих зображень';
 $lang['%d elements ready for importation'] = '%d елементів готові для імпортування';
+$lang['API not authenticated'] = 'API не автентифіковано';
+$lang['Geolocalization'] = 'Геолокалізація';
+$lang['Logged in as'] = 'Ви увійшли як';
+$lang['Logged out'] = 'Вихід із системи';
+$lang['Photo "%s" imported'] = 'Фото "%s" імпортовано';
 ?>
