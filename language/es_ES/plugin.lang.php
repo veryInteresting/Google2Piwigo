@@ -21,7 +21,7 @@
 // | USA.                                                                  |
 // +-----------------------------------------------------------------------+
 $lang['%d albums'] = '%d álbumes';
-$lang['%d pictures are not displayed because already existing in the database.'] = '% d imágenes no se muestran debido a que ya existe en la base de datos.';
+$lang['%d pictures are not displayed because already existing in the database.'] = '% d imágenes no se muestran debido a que ya existen en la base de datos.';
 $lang['%d pictures imported'] = '% d imágenes importadas';
 $lang['(%d photos)'] = '(%d fotos)';
 $lang['Begin transfer'] = 'iniciar la transferencia';
@@ -32,7 +32,7 @@ $lang['Import options'] = 'Opciones para importar';
 $lang['List my albums'] = 'Enumerar mis álbumes';
 $lang['List pictures of this album'] = 'Enumerar imágenes de este álbum';
 $lang['No download method available'] = 'Ningún método disponible de descarga';
-$lang['One picture is not displayed because already existing in the database.'] = 'Una imagen no se muestra porque ya existentes en la base de datos.';
+$lang['One picture is not displayed because already existing in the database.'] = 'Una imagen no se muestra porque ya existe en la base de datos.';
 $lang['Open Google page in a new tab'] = 'Abra la página de Google en una nueva pestaña';
 $lang['Please fill your API keys on the configuration tab'] = 'Por favor, rellene sus claves de la API en la pestaña de configuración';
 $lang['Processing...'] = 'Procesando...';
@@ -40,4 +40,8 @@ $lang['Reproduce Google albums'] = 'Reproducir álbumes de Google';
 $lang['Successfully logged to you Google account'] = 'Logueado con éxito en su cuenta de Google';
 $lang['%d elements ready for importation'] = '%d elementos listos para importar';
 $lang['Logged in as'] = 'Registrado como';
+$lang['Photo "%s" imported'] = 'Imagen "%s" importada ';
+$lang['Logged out'] = 'Desconectado';
+$lang['Geolocalization'] = 'Geolocalización';
+$lang['API not authenticated'] = 'API no autentificada';
 ?>
