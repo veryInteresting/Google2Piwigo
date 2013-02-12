@@ -39,4 +39,9 @@ $lang['Processing...'] = 'Bewerken ...';
 $lang['Reproduce Google albums'] = 'Reproduceer Google albums';
 $lang['Successfully logged to you Google account'] = 'Succesvol ingelogd in Google ';
 $lang['Logged in as'] = 'Ingelogd als';
+$lang['Photo "%s" imported'] = 'Foto "%s" geïmporteerd';
+$lang['Geolocalization'] = 'Geo-localisatie';
+$lang['Logged out'] = 'Uitgelogd';
+$lang['API not authenticated'] = 'API niet geverifieerd';
+$lang['%d elements ready for importation'] = '%d elementen klaar voor import';
 ?>
