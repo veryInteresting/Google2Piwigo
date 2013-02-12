@@ -38,4 +38,9 @@ $lang['Processing...'] = 'İşleniyor...';
 $lang['Reproduce Google albums'] = 'Google albümlerini yeniden üret';
 $lang['Successfully logged to you Google account'] = 'Google \'de başarılı olarak oturum açıldı.';
 $lang['Logged in as'] = 'Oturum açan:';
+$lang['%d elements ready for importation'] = '%d öğe içe aktarma için hazır';
+$lang['API not authenticated'] = 'API doğrulanamadı';
+$lang['Geolocalization'] = 'Konumlama';
+$lang['Logged out'] = 'Oturum kapatıldı';
+$lang['Photo "%s" imported'] = '"%s" fotoğrafı içe aktarıldı';
 ?>
