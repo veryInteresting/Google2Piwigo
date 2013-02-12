@@ -39,4 +39,9 @@ $lang['Processing...'] = 'Apstrāde...';
 $lang['Reproduce Google albums'] = 'Reproducēt Google albūmus';
 $lang['Successfully logged to you Google account'] = 'Esat veiksmīgi pieteikušies savā Google kontā';
 $lang['Logged in as'] = 'Pieteicies kā';
+$lang['%d elements ready for importation'] = '%d elementi gatavi importam';
+$lang['API not authenticated'] = 'API nav autentificēta';
+$lang['Photo "%s" imported'] = 'Foto "%s" importēta';
+$lang['Logged out'] = 'Izlogojies';
+$lang['Geolocalization'] = 'Ģeolokācija';
 ?>
