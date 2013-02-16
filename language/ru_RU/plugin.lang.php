@@ -37,4 +37,10 @@ $lang['Open Google page in a new tab'] = 'Открыть страницу Google
 $lang['Processing...'] = 'Обработка ...';
 $lang['Reproduce Google albums'] = 'Воспроизведение альбомов Google';
 $lang['Successfully logged to you Google account'] = 'Вы успешно вошли в свою учетную запись';
+$lang['%d elements ready for importation'] = 'Фотографии готовы для импорта. Количество фотографий: %d';
+$lang['API not authenticated'] = 'нет авторизации API';
+$lang['Geolocalization'] = 'Географическое положение';
+$lang['Logged in as'] = 'Вы вошли как';
+$lang['Logged out'] = 'Вы вышли из системы ';
+$lang['Photo "%s" imported'] = 'Импортировано фотографий: %d';
 ?>
