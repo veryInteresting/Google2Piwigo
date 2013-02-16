@@ -42,4 +42,5 @@ $lang['%d elements ready for importation'] = '%d elementów gotowych do importu'
 $lang['API not authenticated'] = 'API nieuwierzytelnione';
 $lang['Logged out'] = 'Wylogowany';
 $lang['Photo "%s" imported'] = 'Zdjęcie "%s" zaimportowane';
+$lang['Geolocalization'] = 'Geolokalizacja';
 ?>
