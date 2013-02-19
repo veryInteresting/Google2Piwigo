@@ -39,4 +39,9 @@ $lang['Processing...'] = 'Spracovávam...';
 $lang['Reproduce Google albums'] = 'Reprodukovať Google albumy';
 $lang['Successfully logged to you Google account'] = 'Úspešne prihlásený do Vášho Google konta';
 $lang['Logged in as'] = 'Prihlásený ako';
+$lang['%d elements ready for importation'] = '%d prvkov je pripravených na importovanie';
+$lang['API not authenticated'] = 'API nie je autorizované';
+$lang['Geolocalization'] = 'Geolokalizácia';
+$lang['Logged out'] = 'Odhlásenie';
+$lang['Photo "%s" imported'] = 'Fotka "%s" importovaná';
 ?>
