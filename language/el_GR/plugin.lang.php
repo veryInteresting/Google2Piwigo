@@ -38,4 +38,9 @@ $lang['Processing...'] = 'Επεξεργασία ...';
 $lang['Reproduce Google albums'] = 'Αναπαραγωγή λευκώματος Google ';
 $lang['Successfully logged to you Google account'] = 'Συνδεθήκατε επιτυχώς στο Google λογαριασμό σας';
 $lang['%d elements ready for importation'] = '%d στοιχεία έτοιμα για την εισαγωγή';
+$lang['Photo "%s" imported'] = 'Η Φωτογραφία "%s" εισήλθε';
+$lang['Geolocalization'] = 'Γεωγραφικός Εντοπισμός';
+$lang['Logged out'] = 'Αποσύνδεση';
+$lang['Logged in as'] = 'Συνδεδεμένος ως';
+$lang['API not authenticated'] = 'To API δεν επικυρώνεται';
 ?>
