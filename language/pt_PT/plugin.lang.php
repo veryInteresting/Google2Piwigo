@@ -40,4 +40,8 @@ $lang['Reproduce Google albums'] = 'Reproduzir albuns Google';
 $lang['Successfully logged to you Google account'] = 'Entrou com sucesso na sua conta Google';
 $lang['%d elements ready for importation'] = '%d elementos prontos para a importação ';
 $lang['Logged in as'] = 'Entrou como';
+$lang['Photo "%s" imported'] = 'Fotografia"%s" importadas';
+$lang['Logged out'] = 'Terminar sessão';
+$lang['Geolocalization'] = 'Geolocalização';
+$lang['API not authenticated'] = 'API não autenticada';
 ?>
