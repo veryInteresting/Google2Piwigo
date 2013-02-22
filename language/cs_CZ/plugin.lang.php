@@ -22,10 +22,10 @@
 // +-----------------------------------------------------------------------+
 $lang['%d albums'] = '%d alb';
 $lang['%d pictures are not displayed because already existing in the database.'] = '%d obrázků nebylo zobrazeno, protože se už nachází v databázi';
-$lang['%d pictures imported'] = '%d obrázků importováno';
+$lang['%d pictures imported'] = '%d obrázků naimportováno';
 $lang['(%d photos)'] = '(%d fotek)';
 $lang['Begin transfer'] = 'Začít přenos';
-$lang['Fill these fields from Google datas'] = 'Vyplnit tato pole údaji z Googleu';
+$lang['Fill these fields from Google datas'] = 'Vyplnit tato pole údaji z Googlu';
 $lang['Import all my pictures'] = 'Importovat všechny mé obrázky';
 $lang['Import all photos in this album'] = 'Importovat všechny obrázky v tomto albu';
 $lang['Import options'] = 'Nastavení importu';
@@ -38,4 +38,10 @@ $lang['Open Google page in a new tab'] = 'Otevřít stránku Google v novém tab
 $lang['Processing...'] = 'Zpracovávání...';
 $lang['Reproduce Google albums'] = 'Vytvořit Google alba';
 $lang['Logged in as'] = 'Přihlášen jako';
+$lang['Geolocalization'] = 'Geolokalizace';
+$lang['%d elements ready for importation'] = '%d elementy připraveny pro import';
+$lang['API not authenticated'] = 'API neautentizováno';
+$lang['Logged out'] = 'Odhlášen';
+$lang['Photo "%s" imported'] = 'Foto "%s" naimportováno';
+$lang['Successfully logged to you Google account'] = 'Přihlášení na účet Google proběhlo úspěšně';
 ?>
