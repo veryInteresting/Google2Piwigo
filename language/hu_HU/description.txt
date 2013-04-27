@@ -1,0 +1,1 @@
+Képek beimportálása Google fiókból (beleértve a Picasa web albumokat) 
