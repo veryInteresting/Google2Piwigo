@@ -169,11 +169,9 @@ SELECT id, file
     
     if ($duplicates>0)
     {
-      array_push($page['infos'], l10n_dec(
-          'One picture is not displayed because already existing in the database.', 
-          '%d pictures are not displayed because already existing in the database.',
-          $duplicates
-        ));
+      $page['infos'][] = '<a href="admin.php?page=batch_manager&amp;prefilter=picasa">'
+          .l10n_dec('One picture is not displayed because already existing in the database.', '%d pictures are not displayed because already existing in the database.', $duplicates)
+        .'</a>';
     }
     
     // displayed photos
@@ -261,11 +259,9 @@ SELECT id, file
     
     if ($duplicates>0)
     {
-      array_push($page['infos'], l10n_dec(
-          '%d picture is not displayed because already existing in the database.', 
-          '%d pictures are not displayed because already existing in the database.', 
-          $duplicates
-        ));
+      $page['infos'][] = '<a href="admin.php?page=batch_manager&amp;prefilter=picasa">'
+          .l10n_dec('One picture is not displayed because already existing in the database.', '%d pictures are not displayed because already existing in the database.', $duplicates)
+        .'</a>';
     }
     
     $template->assign(array(

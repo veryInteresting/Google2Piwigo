@@ -23,5 +23,6 @@ $lang['Logged out'] = 'Logged out';
 $lang['%d elements ready for importation'] = '%d elements ready for importation';
 $lang['Geolocalization'] = 'Geolocalization';
 $lang['Logged in as'] = 'Logged in as';
+$lang['Help! I get the error "The site [...] has not been registered."'] = 'Help! I get the error "The site [...] has not been registered."';
 
 ?>
