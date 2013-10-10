@@ -24,8 +24,8 @@ $lang['%d albums'] = '%d albums';
 $lang['%d pictures are not displayed because already existing in the database.'] = '%d foto non sono visualizzate perché già presenti nella galleria';
 $lang['%d pictures imported'] = '%d immagini importate';
 $lang['(%d photos)'] = '(%d foto)';
-$lang['Begin transfer'] = 'Iniziare il trasferimento';
-$lang['Fill these fields from Google datas'] = 'Compila questi campi da Google dati';
+$lang['Begin transfer'] = 'Inizia il trasferimento';
+$lang['Fill these fields from Google datas'] = 'Compila questi campi da Google datas';
 $lang['Import all my pictures'] = 'Importa tutte le mie immagini';
 $lang['Import all photos in this album'] = 'Importa tutte le foto in questo album';
 $lang['Import options'] = 'Opzioni di importazione';
@@ -43,4 +43,5 @@ $lang['Photo "%s" imported'] = 'Foto "%s" importate';
 $lang['Geolocalization'] = 'Geolocalizzazione';
 $lang['API not authenticated'] = 'API non autenticate';
 $lang['%d elements ready for importation'] = '%d elementi pronti per l\'importazione';
+$lang['Help! I get the error "The site [...] has not been registered."'] = 'Aiuto! Ottengo l\'errore "Il sito [...] non è stato registrato."';
 ?>
