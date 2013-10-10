@@ -43,4 +43,5 @@ $lang['List my albums'] = '列出我的相册';
 $lang['List pictures of this album'] = '列出此相册中的图片';
 $lang['No download method available'] = '没有可用的下载方法';
 $lang['One picture is not displayed because already existing in the database.'] = '有1张图片未显示，因为数据库中已存在。';
+$lang['Help! I get the error "The site [...] has not been registered."'] = '请帮忙！我遇到了一个错误“网站[...]并没有注册。”';
 ?>
