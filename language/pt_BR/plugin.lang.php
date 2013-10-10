@@ -43,4 +43,5 @@ $lang['No download method available'] = 'Nenhum médtodo de baixar fotos dispon�
 $lang['One picture is not displayed because already existing in the database.'] = 'Uma foto não mostrada porque já existe no banco de dados';
 $lang['Open Google page in a new tab'] = 'Abre página do google em outra aba';
 $lang['Photo "%s" imported'] = 'Foto %s importada';
+$lang['Help! I get the error "The site [...] has not been registered."'] = 'Ajude-me! Recebí o erro " O site [...] não foi registrado."';
 ?>
