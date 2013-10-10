@@ -43,4 +43,5 @@ $lang['Geolocalization'] = 'Геолокалізація';
 $lang['Logged in as'] = 'Ви увійшли як';
 $lang['Logged out'] = 'Вихід із системи';
 $lang['Photo "%s" imported'] = 'Фото "%s" імпортовано';
+$lang['Help! I get the error "The site [...] has not been registered."'] = 'Допоможіть! Я отримую помилку "Сайт [...] не був зареєстрований."';
 ?>
