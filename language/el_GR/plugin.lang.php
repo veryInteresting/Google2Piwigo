@@ -43,4 +43,5 @@ $lang['Geolocalization'] = 'Γεωγραφικός Εντοπισμός';
 $lang['Logged out'] = 'Αποσύνδεση';
 $lang['Logged in as'] = 'Συνδεδεμένος ως';
 $lang['API not authenticated'] = 'To API δεν επικυρώνεται';
+$lang['Help! I get the error "The site [...] has not been registered."'] = 'Βοήθεια! Λαμβάνω ένα σφάλμα "Το site [...] δεν έχει καταχωρηθεί."';
 ?>
