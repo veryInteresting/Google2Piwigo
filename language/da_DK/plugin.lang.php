@@ -44,4 +44,5 @@ $lang['Reproduce Google albums'] = 'Reproducer Google-albummer';
 $lang['Geolocalization'] = 'Geolokalisering';
 $lang['Logged in as'] = 'Logget ind som';
 $lang['Successfully logged to you Google account'] = 'Loggede på din Google-konto';
+$lang['Help! I get the error "The site [...] has not been registered."'] = 'Hjælp! Jeg får fejlen "The site [...] has not been registered."';
 ?>
