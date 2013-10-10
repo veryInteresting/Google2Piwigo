@@ -43,4 +43,5 @@ $lang['API not authenticated'] = 'API nicht authentifiziert';
 $lang['Geolocalization'] = 'Geo-Lokalisierung';
 $lang['Logged out'] = 'Abgemeldet';
 $lang['Photo "%s" imported'] = 'Foto "%s" importiert';
+$lang['Help! I get the error "The site [...] has not been registered."'] = 'Hilfe, Ich bekomme die Fehlermeldung: "Die Seite (...) wurde nicht registriert"';
 ?>
