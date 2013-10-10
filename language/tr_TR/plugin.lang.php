@@ -43,4 +43,5 @@ $lang['API not authenticated'] = 'API doğrulanamadı';
 $lang['Geolocalization'] = 'Konumlama';
 $lang['Logged out'] = 'Oturum kapatıldı';
 $lang['Photo "%s" imported'] = '"%s" fotoğrafı içe aktarıldı';
+$lang['Help! I get the error "The site [...] has not been registered."'] = 'Yardım edin! "Site [...] henüz kaydedilmemiş." hatası alıyorum.';
 ?>
