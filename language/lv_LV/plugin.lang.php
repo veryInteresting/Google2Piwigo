@@ -44,4 +44,5 @@ $lang['API not authenticated'] = 'API nav autentificēta';
 $lang['Photo "%s" imported'] = 'Foto "%s" importēta';
 $lang['Logged out'] = 'Izlogojies';
 $lang['Geolocalization'] = 'Ģeolokācija';
+$lang['Help! I get the error "The site [...] has not been registered."'] = 'Palīdziet! Radās kļūda "Vietne [...] nav reģistrēta."';
 ?>
