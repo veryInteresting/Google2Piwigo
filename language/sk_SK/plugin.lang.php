@@ -44,4 +44,5 @@ $lang['API not authenticated'] = 'API nie je autorizované';
 $lang['Geolocalization'] = 'Geolokalizácia';
 $lang['Logged out'] = 'Odhlásenie';
 $lang['Photo "%s" imported'] = 'Fotka "%s" importovaná';
+$lang['Help! I get the error "The site [...] has not been registered."'] = 'Pomoc! Obdržal som chybu "Stránka [...] nebola zaregistrovaná."';
 ?>
