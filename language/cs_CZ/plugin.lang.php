@@ -44,4 +44,5 @@ $lang['API not authenticated'] = 'API neautentizováno';
 $lang['Logged out'] = 'Odhlášen';
 $lang['Photo "%s" imported'] = 'Foto "%s" naimportováno';
 $lang['Successfully logged to you Google account'] = 'Přihlášení na účet Google proběhlo úspěšně';
+$lang['Help! I get the error "The site [...] has not been registered."'] = 'Pomoc! Objevila se tato chyba "Stránka [...] nebyla registrována."';
 ?>
