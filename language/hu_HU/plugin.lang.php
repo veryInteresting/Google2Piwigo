@@ -43,4 +43,5 @@ $lang['%d pictures imported'] = '%d importált képek';
 $lang['%d pictures are not displayed because already existing in the database.'] = '%d a képek nem jelennek meg, mert már léteznek az adatbázisban.';
 $lang['%d elements ready for importation'] = '%d importálásra kész elemek';
 $lang['%d albums'] = '%d albumok';
+$lang['Help! I get the error "The site [...] has not been registered."'] = 'Segítség! Hiba üzenetet kapok:"A honlap [...] nincs regisztrálva."';
 ?>
