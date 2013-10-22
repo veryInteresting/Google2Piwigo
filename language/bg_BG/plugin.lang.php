@@ -43,4 +43,5 @@ $lang['Begin transfer'] = 'Започнете прехвърлянето';
 $lang['%d pictures imported'] = '%d внесени снимки';
 $lang['%d elements ready for importation'] = '%d елементи, готови за внасяне';
 $lang['%d albums'] = '%албуми';
+$lang['Help! I get the error "The site [...] has not been registered."'] = 'Помощ! Излиза ми грешка "Сайта [...] не може да бъде регистриран."';
 ?>
