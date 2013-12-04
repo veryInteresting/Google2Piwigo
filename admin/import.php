@@ -293,7 +293,7 @@ SELECT id, name, uppercats, global_rank
 
 $template->assign(array(
   'ACTION' => $_GET['action'],
-  'GMAPS_LOADED' => !empty($pwg_loaded_plugins['rv_gmaps']),
+  'GMAPS_LOADED' => !empty($pwg_loaded_plugins['rv_gmaps']) || !empty($pwg_loaded_plugins['piwigo-openstreetmap']),
   ));
 
 $template->set_filename('picasa_web_albums', realpath(PICASA_WA_PATH . '/admin/template/import.tpl'));

@@ -1,9 +1,3 @@
-{include file='include/colorbox.inc.tpl'}
-{include file='include/add_album.inc.tpl'}
-{combine_script id='jquery.ajaxmanager' load='footer' path='themes/default/js/plugins/jquery.ajaxmanager.js'}
-{combine_script id='jquery.jgrowl' load='footer' require='jquery' path='themes/default/js/plugins/jquery.jgrowl_minimized.js'}
-{combine_css path="admin/themes/default/uploadify.jGrowl.css"}
-
 {footer_script require='jquery.ajaxmanager,jquery.jgrowl'}
 /* global vars */
 var errorHead   = '{'ERROR'|@translate|@escape:'javascript'}';
