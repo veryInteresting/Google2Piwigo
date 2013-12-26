@@ -1,5 +1,5 @@
 <?php
-if (!defined('PICASA_WA_PATH')) die('Hacking attempt!');
+defined('PICASA_WA_PATH') or die('Hacking attempt!');
 
 /**
  * test if a download method is available
@@ -115,5 +115,3 @@ function picasa_wa_download_remote_file($src, $dest, $headers=array())
   
   return false;
 }
-
-?>

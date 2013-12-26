@@ -1,5 +1,5 @@
 <?php
-if (!defined('PICASA_WA_PATH')) die('Hacking attempt!');
+defined('PICASA_WA_PATH') or die('Hacking attempt!');
 
 function picasa_wa_add_ws_method($arr)
 {
@@ -14,7 +14,9 @@ function picasa_wa_add_ws_method($arr)
       'category' => array(),
       'fills' => array('default' => 'fill_name,fill_author,fill_tags,fill_date,fill_description'),
       ),
-    'Used by Picasa Web Albums'
+    'Used by Picasa Web Albums',
+    null,
+    array('hidden'=>true)
     );
 }
 
@@ -71,7 +73,7 @@ function ws_images_addPicasa($params, &$service)
   
   $photo['path'] = PICASA_WA_CACHE . 'picasa-'.$photo['id'].'.'.get_extension($photo['url']);
   
-  if ($photoEntry->getGeoRssWhere() !== null && !empty($pwg_loaded_plugins['rv_gmaps']))
+  if ($photoEntry->getGeoRssWhere() !== null)
   {
     $photo['latlon'] = $photoEntry->getGeoRssWhere()->getPoint()->getPos()->getText();
   }
@@ -135,13 +137,13 @@ SELECT id FROM '.CATEGORIES_TABLE.'
     if (in_array('fill_date', $params['fills']))        $updates['date_creation'] = date('Y-m-d H:i:s', $photo['timestamp']);
     if (in_array('fill_author', $params['fills']))      $updates['author'] = pwg_db_real_escape_string($photo['author']);
     if (in_array('fill_description', $params['fills'])) $updates['comment'] = pwg_db_real_escape_string($photo['description']);
-    if (in_array('fill_geotag', $params['fills']) and !empty($photo['latlon']) )
+    if (in_array('fill_geotag', $params['fills']) and !empty($photo['latlon']))
     {
       $latlon = explode(' ', $photo['latlon']);
       if (count($latlon) == 2)
       {
-        $updates['lat'] = pwg_db_real_escape_string($latlon[0]);
-        $updates['lon'] = pwg_db_real_escape_string($latlon[1]);
+        $updates['latitude'] = pwg_db_real_escape_string($latlon[0]);
+        $updates['longitude'] = pwg_db_real_escape_string($latlon[1]);
       }
     }
     
@@ -154,13 +156,11 @@ SELECT id FROM '.CATEGORIES_TABLE.'
         );
     }
     
-    if ( !empty($photo['tags']) and in_array('fill_tags', $params['fills']) )
+    if (!empty($photo['tags']) and in_array('fill_tags', $params['fills']))
     {
       set_tags(get_tag_ids($photo['tags']), $photo['image_id']);
     }
   }
   
-  return sprintf(l10n('Photo "%s" imported'), $photo['title']);
+  return l10n('Photo "%s" imported', $photo['title']);
 }
-
-?>

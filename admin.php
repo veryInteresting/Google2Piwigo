@@ -1,5 +1,5 @@
 <?php
-if (!defined('PICASA_WA_PATH')) die('Hacking attempt!');
+defined('PICASA_WA_PATH') or die('Hacking attempt!');
 
 global $template, $page, $conf;
 
@@ -19,6 +19,5 @@ $template->assign(array(
   'PICASA_WA_ABS_PATH'=> dirname(__FILE__).'/',
   'PICASA_WA_ADMIN' => PICASA_WA_ADMIN,
   ));
-$template->assign_var_from_handle('ADMIN_CONTENT', 'picasa_web_albums');
 
-?>
+$template->assign_var_from_handle('ADMIN_CONTENT', 'picasa_web_albums');

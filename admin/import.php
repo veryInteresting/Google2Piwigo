@@ -1,13 +1,13 @@
 <?php
-if (!defined('PICASA_WA_PATH')) die('Hacking attempt!');
+defined('PICASA_WA_PATH') or die('Hacking attempt!');
 
 set_time_limit(600);
 
 include_once(PICASA_WA_PATH . 'include/functions.inc.php');
 
-if ( !test_remote_download() )
+if (!test_remote_download())
 {
-  array_push($page['errors'], l10n('No download method available'));
+  $page['errors'][] = l10n('No download method available');
   $_GET['action'] = 'error';
 }
 else
@@ -38,7 +38,10 @@ else
 }
 
 
-if (!isset($_GET['action'])) $_GET['action'] = 'main';
+if (!isset($_GET['action']))
+{
+  $_GET['action'] = 'main';
+}
 
 switch ($_GET['action'])
 {
@@ -101,12 +104,12 @@ switch ($_GET['action'])
     $albums = array();
     foreach ($userFeed as $userEntry)
     {
-      array_push($albums, array(
+      $albums[] = array(
         'title' =>       $userEntry->title->text,
         'description' => $userEntry->mediaGroup->description->text,
         'photos' =>      $userEntry->gphotoNumPhotos->text,
         'U_LIST' => PICASA_WA_ADMIN . '-import&amp;action=list_photos&amp;album=' . $userEntry->gphotoId->text,
-        ));
+        );
     }
     
     $template->assign(array(
@@ -138,13 +141,13 @@ switch ($_GET['action'])
     $all_photos = array();
     foreach ($albumFeed as $albumEntry)
     {
-      array_push($all_photos, array(
+      $all_photos[] = array(
         'id' =>    $albumEntry->getGphotoId()->getText(),
         'name' =>  $albumEntry->mediaGroup->title->text,
         'thumb' => $albumEntry->mediaGroup->thumbnail[1]->url,
         'src' =>   $albumEntry->mediaGroup->content[0]->url,
         'url' =>   $albumEntry->link[2]->href,
-        ));
+        );
     }
     
     // get existing photos
@@ -169,8 +172,11 @@ SELECT id, file
     
     if ($duplicates>0)
     {
-      $page['infos'][] = '<a href="admin.php?page=batch_manager&amp;prefilter=picasa">'
-          .l10n_dec('One picture is not displayed because already existing in the database.', '%d pictures are not displayed because already existing in the database.', $duplicates)
+      $page['infos'][] = '<a href="admin.php?page=batch_manager&amp;filter=prefilter-picasa">'
+          .l10n_dec(
+            'One picture is not displayed because already existing in the database.',
+            '%d pictures are not displayed because already existing in the database.',
+            $duplicates)
         .'</a>';
     }
     
@@ -259,14 +265,17 @@ SELECT id, file
     
     if ($duplicates>0)
     {
-      $page['infos'][] = '<a href="admin.php?page=batch_manager&amp;prefilter=picasa">'
-          .l10n_dec('One picture is not displayed because already existing in the database.', '%d pictures are not displayed because already existing in the database.', $duplicates)
+      $page['infos'][] = '<a href="admin.php?page=batch_manager&amp;filter=prefilter-picasa">'
+          .l10n_dec(
+            'One picture is not displayed because already existing in the database.',
+            '%d pictures are not displayed because already existing in the database.',
+            $duplicates)
         .'</a>';
     }
     
     $template->assign(array(
       'nb_elements' =>  count($all_photos),
-      'all_elements' => json_encode($all_photos),
+      'all_elements' => $all_photos,
       'F_ACTION' =>     PICASA_WA_ADMIN . '-import&amp;action=import_set',
       ));
       
@@ -284,18 +293,13 @@ SELECT id, name, uppercats, global_rank
   {
     if (isset($_POST['done']))
     {
-      $_SESSION['page_infos'][] = sprintf(l10n('%d pictures imported'), $_POST['done']);
+      $_SESSION['page_infos'][] = l10n('%d pictures imported', $_POST['done']);
     }
     redirect(PICASA_WA_ADMIN . '-import');
   }
 }
 
 
-$template->assign(array(
-  'ACTION' => $_GET['action'],
-  'GMAPS_LOADED' => !empty($pwg_loaded_plugins['rv_gmaps']) || !empty($pwg_loaded_plugins['piwigo-openstreetmap']),
-  ));
+$template->assign('ACTION', $_GET['action']);
 
 $template->set_filename('picasa_web_albums', realpath(PICASA_WA_PATH . '/admin/template/import.tpl'));
-
-?>
