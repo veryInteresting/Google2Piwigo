@@ -21,27 +21,27 @@
 // | USA.                                                                  |
 // +-----------------------------------------------------------------------+
 $lang['%d albums'] = '%d albums';
-$lang['%d pictures are not displayed because already existing in the database.'] = '%d afbeeldingen worden niet getoond omdat ze al in de database staan.';
+$lang['%d pictures are not displayed because already existing in the database.'] = '%d afbeeldingen worden niet getoond omdat ze al in de database bestaan.';
 $lang['%d pictures imported'] = '%d afbeeldingen geïmporteerd';
 $lang['(%d photos)'] = '(%d foto\'s)';
-$lang['API secret'] = 'API geheim';
 $lang['Begin transfer'] = 'Begin overdracht';
 $lang['Fill these fields from Google datas'] = 'Vul deze velden met Google data';
 $lang['Import all my pictures'] = 'Importeer al mijn afbeeldingen';
 $lang['Import all photos in this album'] = 'Importeer alle foto\'s in dit album';
-$lang['Import options'] = 'Import opties';
+$lang['Import options'] = 'Importeer opties';
 $lang['List my albums'] = 'Maak een lijst met mijn albums';
 $lang['List pictures of this album'] = 'Maak een lijst met afbeeldingen van dit album';
-$lang['No download method available'] = 'Geen download aanpak voorhanden';
-$lang['One picture is not displayed because already existing in the database.'] = 'Een afbeelding wordt niet getoond omdat het al in de database aanwezig is.';
+$lang['No download method available'] = 'Geen downloadmethode voorhanden';
+$lang['One picture is not displayed because already existing in the database.'] = 'Een afbeelding wordt niet getoond omdat deze al in de database aanwezig is.';
 $lang['Open Google page in a new tab'] = 'Open de Google pagina in een nieuwe tab';
 $lang['Processing...'] = 'Bewerken ...';
 $lang['Reproduce Google albums'] = 'Reproduceer Google albums';
-$lang['Successfully logged to you Google account'] = 'Succesvol ingelogd in Google ';
-$lang['Logged in as'] = 'Ingelogd als';
+$lang['Successfully logged to you Google account'] = 'Succesvol aangemeld bij Google ';
+$lang['Logged in as'] = 'Aangemeld als';
 $lang['Photo "%s" imported'] = 'Foto "%s" geïmporteerd';
 $lang['Geolocalization'] = 'Geo-localisatie';
-$lang['Logged out'] = 'Uitgelogd';
+$lang['Logged out'] = 'Afgemeld';
 $lang['API not authenticated'] = 'API niet geverifieerd';
-$lang['%d elements ready for importation'] = '%d elementen klaar voor import';
+$lang['%d elements ready for importation'] = '%d elementen klaar voor importeren';
+$lang['Help! I get the error "The site [...] has not been registered."'] = 'Help! Ik krijg de foutmelding "De site [...] is niet geregistreerd." ("The site [...] has not been registered.")';
 ?>
