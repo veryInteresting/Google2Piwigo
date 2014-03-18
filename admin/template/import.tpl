@@ -3,7 +3,7 @@
 {combine_script id='common' load='footer' path='admin/themes/default/js/common.js'}
 {combine_script id='jquery.ajaxmanager' load='footer' path='themes/default/js/plugins/jquery.ajaxmanager.js'}
 {combine_script id='jquery.jgrowl' load='footer' require='jquery' path='themes/default/js/plugins/jquery.jgrowl_minimized.js'}
-{combine_css path="themes/default/js/plugins/jquery.jGrowl.css"}
+{combine_css path="themes/default/js/plugins/jquery.jgrowl.css"}
 
 {combine_css path=$PICASA_WA_PATH|cat:"admin/template/style.css"}
 
