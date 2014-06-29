@@ -43,5 +43,7 @@ $lang['Geolocalization'] = 'Γεωγραφικός Εντοπισμός';
 $lang['Logged out'] = 'Αποσύνδεση';
 $lang['Logged in as'] = 'Συνδεδεμένος ως';
 $lang['API not authenticated'] = 'To API δεν επικυρώνεται';
-$lang['Help! I get the error "The site [...] has not been registered."'] = 'Βοήθεια! Λαμβάνω ένα σφάλμα "Το site [...] δεν έχει καταχωρηθεί."';
-?>
+$lang['Please fill your API keys on the configuration tab'] = 'Παρακαλούμε συμπληρώστε τα API Κλειδιά σας στην φόρμα διαμόρφωσης';
+$lang['How do I get my Google project API key?'] = 'Πώς μπορώ να πάρει το κλειδί του έργου Google API μου;';
+$lang['Google project keys'] = 'Κλειδιά του έργου Google';
+$lang['Callback URL'] = 'URL Επανάκλησης ';
