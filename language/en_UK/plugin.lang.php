@@ -1,5 +1,6 @@
 <?php
 
+$lang['Please fill your API keys on the configuration tab'] = 'Please fill your API keys on the configuration tab';
 $lang['Successfully logged to you Google account'] = 'Successfully logged to you Google account';
 $lang['One picture is not displayed because already existing in the database.'] = 'One picture is not displayed because already existing in the database.';
 $lang['%d pictures are not displayed because already existing in the database.'] = '%d pictures are not displayed because already existing in the database.';
@@ -23,6 +24,8 @@ $lang['Logged out'] = 'Logged out';
 $lang['%d elements ready for importation'] = '%d elements ready for importation';
 $lang['Geolocalization'] = 'Geolocalization';
 $lang['Logged in as'] = 'Logged in as';
-$lang['Help! I get the error "The site [...] has not been registered."'] = 'Help! I get the error "The site [...] has not been registered."';
+$lang['Google project keys'] = 'Google project keys';
+$lang['Callback URL'] = 'Callback URL';
+$lang['How do I get my Google project API key?'] = 'How do I get my Google project API key?';
 
 ?>

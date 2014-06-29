@@ -16,10 +16,13 @@ define('PICASA_WA_ID',    basename(dirname(__FILE__)));
 define('PICASA_WA_PATH',  PHPWG_PLUGINS_PATH . PICASA_WA_ID . '/');
 define('PICASA_WA_ADMIN', get_root_url() . 'admin.php?page=plugin-' . PICASA_WA_ID);
 define('PICASA_WA_CACHE', PHPWG_ROOT_PATH . $conf['data_location'] . 'picasa_wa_cache/');
+define('PICASA_WA_VERSION',  'auto');
 
 
 include_once(PICASA_WA_PATH . 'include/ws_functions.inc.php');
 
+
+add_event_handler('init', 'picasa_wa_init');
 add_event_handler('ws_add_methods', 'picasa_wa_add_ws_method');
 
 if (defined('IN_ADMIN'))
@@ -61,4 +64,14 @@ if (defined('IN_ADMIN'))
     
     return $filter_sets;
   }
+}
+
+function picasa_wa_init()
+{
+  global $conf;
+  include_once(PICASA_WA_PATH . 'maintain.inc.php');
+  $maintain = new Google2Piwigo_maintain(PICASA_WA_ID);
+  $maintain->autoUpdate(PICASA_WA_VERSION, 'install');
+
+  $conf['google2piwigo'] = unserialize($conf['google2piwigo']);
 }

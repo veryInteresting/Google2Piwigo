@@ -11,9 +11,6 @@
 $("input.login").click(function() {
   window.location.href = "{$picasa_login}";
 });
-$(".login_help").click(function() {
-  $(".infos.tip").slideToggle();
-});
 {/footer_script}
 
 
@@ -22,13 +19,8 @@ $(".login_help").click(function() {
 </div>
 
 {* <!-- LOGIN --> *}
-{if $ACTION == 'login'}
+{if $ACTION == 'init_login'}
 <p><input type="submit" class="login" value="{'Login'|translate}"></p>
-<p><a href="#" class="login_help">{'Help! I get the error "The site [...] has not been registered."'|translate}</a></p>
-
-<div class="infos tip" style="display:none;">
-{$HELP_CONTENT}
-</div>
 
 {* <!-- MAIN MENU --> *}
 {else if $ACTION == 'main'}

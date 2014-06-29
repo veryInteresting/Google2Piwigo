@@ -5,7 +5,13 @@ set_time_limit(600);
 
 include_once(PICASA_WA_PATH . 'include/functions.inc.php');
 
-if (!test_remote_download())
+// check API parameters and connect to flickr
+if (empty($conf['google2piwigo']['api_key']) or empty($conf['google2piwigo']['secret_key']))
+{
+  $page['warnings'][] = l10n('Please fill your API keys on the configuration tab');
+  $_GET['action'] = 'error';
+}
+else if (!test_remote_download())
 {
   $page['errors'][] = l10n('No download method available');
   $_GET['action'] = 'error';
@@ -17,23 +23,32 @@ else
   require_once('Zend/Loader.php');
   Zend_Loader::loadClass('Zend_Gdata_AuthSub');
   Zend_Loader::loadClass('Zend_Gdata_Photos');
+  require_once('OAuth2/Client.php');
+  require_once('OAuth2/GrantType/AuthorizationCode.php');
+  
+  $oauth_client = new OAuth2_Client($conf['google2piwigo']['api_key'], $conf['google2piwigo']['secret_key']);
+  $oauth_redirect_url = get_absolute_root_url() . PICASA_WA_ADMIN . '-import';
   
   // generate token after authentication
-  if (!empty($_GET['token']))
+  if (!empty($_GET['code']))
   {
-    $_SESSION['gdata_auth_token'] = Zend_Gdata_AuthSub::getAuthSubSessionToken($_GET['token']);
+    $params = array('code' => $_GET['code'], 'redirect_uri' => $oauth_redirect_url, 'scope' => 'https://picasaweb.google.com/data/');
+    $response = $oauth_client->getAccessToken($conf['google2piwigo']['token_endpoint'], 'authorization_code', $params);
+    $_SESSION['gdata_auth_token'] = $response['result']['access_token'];
     $_GET['action'] = 'logged';
   }
   
-  // authentication
-  if (empty($_SESSION['gdata_auth_token']))
-  {
-    $_GET['action'] = 'login';
-  }
-  else
+  // must authenticate
+  if (!empty($_SESSION['gdata_auth_token']))
   {
     $client = Zend_Gdata_AuthSub::getHttpClient($_SESSION['gdata_auth_token']);
     $picasa = new Zend_Gdata_Photos($client, "Piwigo-Google2Piwigo-1.0");
+  }
+  else
+  {
+    $params = array('scope' => 'https://picasaweb.google.com/data/');
+    $auth_url = $oauth_client->getAuthenticationUrl($conf['google2piwigo']['auth_endpoint'], $oauth_redirect_url, $params);
+    $_GET['action'] = 'init_login';
   }
 }
 
@@ -46,18 +61,9 @@ if (!isset($_GET['action']))
 switch ($_GET['action'])
 {
   // button to login page
-  case 'login':
+  case 'init_login':
   {
-    $login_url = Zend_Gdata_AuthSub::getAuthSubTokenUri(
-      get_absolute_root_url() . PICASA_WA_ADMIN . '-import',
-      'https://picasaweb.google.com/data', 
-      false, true
-      );
-        
-    $template->assign(array(
-      'picasa_login' => $login_url,
-      'HELP_CONTENT' => load_language('help.lang.html', PICASA_WA_PATH, array('return'=>true)),
-      ));
+    $template->assign('picasa_login', $auth_url);
     break;
   }
   
@@ -72,12 +78,7 @@ switch ($_GET['action'])
   // logout
   case 'logout':
   {
-    Zend_Gdata_AuthSub::AuthSubRevokeToken(
-      $_SESSION['gdata_auth_token'],
-      $client
-      );
     unset($_SESSION['gdata_auth_token']);
-    
     $_SESSION['page_infos'][] = l10n('Logged out');
     redirect(PICASA_WA_ADMIN . '-import');
     break;
