@@ -44,5 +44,6 @@ $lang['Photo "%s" imported'] = 'Imagen "%s" importada ';
 $lang['Logged out'] = 'Desconectado';
 $lang['Geolocalization'] = 'Geolocalización';
 $lang['API not authenticated'] = 'API no autentificada';
-$lang['Help! I get the error "The site [...] has not been registered."'] = 'Ayuda! Me sale el error "El sitio [...] no ha sido registrado."';
-?>
+$lang['Callback URL'] = 'Url de Callback (devolución de llamada)';
+$lang['Google project keys'] = 'Claves de proyecto Google';
+$lang['How do I get my Google project API key?'] = 'Como puedo conseguir mi Claves de proyecto Google';
