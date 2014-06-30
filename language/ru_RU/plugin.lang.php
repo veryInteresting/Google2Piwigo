@@ -43,5 +43,7 @@ $lang['Geolocalization'] = 'Географическое положение';
 $lang['Logged in as'] = 'Вы вошли как';
 $lang['Logged out'] = 'Вы вышли из системы ';
 $lang['Photo "%s" imported'] = 'Импортировано фотографий: %d';
-$lang['Help! I get the error "The site [...] has not been registered."'] = 'На помощь! У меня ошибка "Сайт [...] не зарегистрирован"';
-?>
+$lang['Callback URL'] = 'Ответный URL';
+$lang['Google project keys'] = 'Проектные ключи Google';
+$lang['How do I get my Google project API key?'] = 'Как получить API-ключ Google-проекта?';
+$lang['Please fill your API keys on the configuration tab'] = 'Пожалуйста, заполните Ваши ключи API на вкладке Конфигурация';
