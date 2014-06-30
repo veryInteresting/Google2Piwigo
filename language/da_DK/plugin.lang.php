@@ -20,7 +20,6 @@
 // | Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, |
 // | USA.                                                                  |
 // +-----------------------------------------------------------------------+
-$lang['Successfully logued to you Google account'] = 'Det lykkedes at logge på din Google-konto';
 $lang['%d albums'] = '%d albummer';
 $lang['%d elements ready for importation'] = '%d elementer klar til import';
 $lang['%d pictures are not displayed because already existing in the database.'] = '%d billeder vises ikke fordi de allerede findes i databasen.';
@@ -44,5 +43,7 @@ $lang['Reproduce Google albums'] = 'Reproducer Google-albummer';
 $lang['Geolocalization'] = 'Geolokalisering';
 $lang['Logged in as'] = 'Logget ind som';
 $lang['Successfully logged to you Google account'] = 'Loggede på din Google-konto';
-$lang['Help! I get the error "The site [...] has not been registered."'] = 'Hjælp! Jeg får fejlen "The site [...] has not been registered."';
-?>
+$lang['Callback URL'] = 'Tilbagekalds-URL';
+$lang['Google project keys'] = 'Google-projektnøgler';
+$lang['How do I get my Google project API key?'] = 'Hvordan får jeg fat i min Google-projekt-API-nøgle?';
+$lang['Please fill your API keys on the configuration tab'] = 'Angiv dine API-nøgler på opsætningsfanebladet';
