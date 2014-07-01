@@ -43,5 +43,7 @@ $lang['API not authenticated'] = 'API doğrulanamadı';
 $lang['Geolocalization'] = 'Konumlama';
 $lang['Logged out'] = 'Oturum kapatıldı';
 $lang['Photo "%s" imported'] = '"%s" fotoğrafı içe aktarıldı';
-$lang['Help! I get the error "The site [...] has not been registered."'] = 'Yardım edin! "Site [...] henüz kaydedilmemiş." hatası alıyorum.';
-?>
+$lang['Callback URL'] = 'Geridönüş URL adresi';
+$lang['Google project keys'] = 'Google proje anahtarları';
+$lang['How do I get my Google project API key?'] = 'Google proje API anahtarını nasıl alırım ?';
+$lang['Please fill your API keys on the configuration tab'] = 'Lütfen yapılandırma sekmesindeki API anahtarlarınızı girin';
