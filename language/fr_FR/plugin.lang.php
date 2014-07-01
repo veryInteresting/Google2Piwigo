@@ -23,6 +23,8 @@ $lang['Logged out'] = 'Déconnecté';
 $lang['%d elements ready for importation'] = '%d elements prêts à l\'importation';
 $lang['Logged in as'] = 'Indentifié en tant que';
 $lang['Geolocalization'] = 'Géolocalisation';
-$lang['Help! I get the error "The site [...] has not been registered."'] = 'A l\'aide! J\'obtiens l\'erreur "The site [...] has not been registered."';
 
-?>
+$lang['Please fill your API keys on the configuration tab'] = 'Veuillez renseigner vos clés de projet dans l\'onglet configuration.';
+$lang['How do I get my Google project API key?'] = 'Comment obtenir mes clés de projet Google ?';
+$lang['Google project keys'] = 'Clés de projet Google';
+$lang['Callback URL'] = 'URL de retour';
