@@ -43,5 +43,7 @@ $lang['Photo "%s" imported'] = 'Foto "%s" importate';
 $lang['Geolocalization'] = 'Geolocalizzazione';
 $lang['API not authenticated'] = 'API non autenticate';
 $lang['%d elements ready for importation'] = '%d elementi pronti per l\'importazione';
-$lang['Help! I get the error "The site [...] has not been registered."'] = 'Aiuto! Ottengo l\'errore "Il sito [...] non è stato registrato."';
-?>
+$lang['Please fill your API keys on the configuration tab'] = 'Sei pregato di compilare le chiavi API nellla scheda di configurazione';
+$lang['How do I get my Google project API key?'] = 'Come faccio ad avere la mia chiave API del progetto Google?';
+$lang['Google project keys'] = 'Progetto chiave di Google';
+$lang['Callback URL'] = 'URL di ritorno';
