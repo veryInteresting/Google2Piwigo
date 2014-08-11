@@ -44,5 +44,6 @@ $lang['API not authenticated'] = 'API nav autentificēta';
 $lang['Photo "%s" imported'] = 'Foto "%s" importēta';
 $lang['Logged out'] = 'Izlogojies';
 $lang['Geolocalization'] = 'Ģeolokācija';
-$lang['Help! I get the error "The site [...] has not been registered."'] = 'Palīdziet! Radās kļūda "Vietne [...] nav reģistrēta."';
-?>
+$lang['How do I get my Google project API key?'] = 'Kā es varu tikt pie savas Google projekta API atslēgas';
+$lang['Google project keys'] = 'Google projekta atslēgas';
+$lang['Callback URL'] = 'Atpakaļsaites URL';
