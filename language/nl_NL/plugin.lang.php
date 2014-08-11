@@ -43,5 +43,7 @@ $lang['Geolocalization'] = 'Geo-localisatie';
 $lang['Logged out'] = 'Afgemeld';
 $lang['API not authenticated'] = 'API niet geverifieerd';
 $lang['%d elements ready for importation'] = '%d elementen klaar voor importeren';
-$lang['Help! I get the error "The site [...] has not been registered."'] = 'Help! Ik krijg de foutmelding "De site [...] is niet geregistreerd." ("The site [...] has not been registered.")';
-?>
+$lang['Please fill your API keys on the configuration tab'] = 'Vul uw API keys in op het configuratie-tabblad';
+$lang['Google project keys'] = 'Google-project API keys';
+$lang['How do I get my Google project API key?'] = 'Hoe krijg ik mijn Google-project API key?';
+$lang['Callback URL'] = 'Terugbel URL';
