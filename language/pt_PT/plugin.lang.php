@@ -26,7 +26,6 @@ $lang['%d pictures imported'] = '%d fotos importadas';
 $lang['(%d photos)'] = '(%d fotos)';
 $lang['Begin transfer'] = 'Transferencia grande';
 $lang['Fill these fields from Google datas'] = 'Completar estes campos com dados Google';
-$lang['How do I get my Google API key?'] = 'Como obter a chave API Google';
 $lang['Import all my pictures'] = 'Inportar todas as minhas fotos';
 $lang['Import all photos in this album'] = 'Importar todas as fotos deste Album';
 $lang['Import options'] = 'Opções de importação';
@@ -44,5 +43,7 @@ $lang['Photo "%s" imported'] = 'Fotografia"%s" importadas';
 $lang['Logged out'] = 'Terminar sessão';
 $lang['Geolocalization'] = 'Geolocalização';
 $lang['API not authenticated'] = 'API não autenticada';
-$lang['Help! I get the error "The site [...] has not been registered."'] = 'Ajuda! obtem o erro " O sitio [...] não foi registado"';
-?>
+$lang['Callback URL'] = 'URL de retorno';
+$lang['Google project keys'] = 'Chaves do projeto Google';
+$lang['How do I get my Google project API key?'] = 'Como obtenho a minha chave API de Google';
+$lang['Please fill your API keys on the configuration tab'] = 'Por favor preenche as chaves API na barra de configuração';
