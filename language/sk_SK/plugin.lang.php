@@ -26,7 +26,6 @@ $lang['%d pictures imported'] = '%d fotiek importovaných';
 $lang['(%d photos)'] = '(%d fotiek)';
 $lang['Begin transfer'] = 'Začať prenos';
 $lang['Fill these fields from Google datas'] = 'Plniť tieto polia z Google dát';
-$lang['How do I get my Google API key?'] = 'Ako získam Google API kľúč?';
 $lang['Import all my pictures'] = 'Import všetkých mojich fotiek';
 $lang['Import all photos in this album'] = 'Import všetkých fotiek do tohto albumu';
 $lang['Import options'] = 'Voľby importu';
@@ -44,5 +43,7 @@ $lang['API not authenticated'] = 'API nie je autorizované';
 $lang['Geolocalization'] = 'Geolokalizácia';
 $lang['Logged out'] = 'Odhlásenie';
 $lang['Photo "%s" imported'] = 'Fotka "%s" importovaná';
-$lang['Help! I get the error "The site [...] has not been registered."'] = 'Pomoc! Obdržal som chybu "Stránka [...] nebola zaregistrovaná."';
-?>
+$lang['Please fill your API keys on the configuration tab'] = 'Vyplňte, prosím, svoje kľúče API na karte Konfigurácia';
+$lang['How do I get my Google project API key?'] = 'Ako získať kľúč k projektu Google API?';
+$lang['Google project keys'] = 'Google projektové kľúče';
+$lang['Callback URL'] = 'Spätné volanie URL';
