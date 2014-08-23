@@ -4,6 +4,7 @@ defined('PICASA_WA_PATH') or die('Hacking attempt!');
 global $template, $page, $conf;
 
 load_language('plugin.lang', PICASA_WA_PATH);
+$conf['google2piwigo'] = safe_unserialize($conf['google2piwigo']);
 
 if (!file_exists(PICASA_WA_CACHE))
 {

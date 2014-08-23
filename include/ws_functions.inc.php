@@ -27,7 +27,9 @@ function ws_images_addPicasa($params, &$service)
     return new PwgError(401, 'Forbidden');
   }
   
-  global $conf, $pwg_loaded_plugins;
+  global $conf;
+  
+  $conf['google2piwigo'] = safe_unserialize($conf['google2piwigo']);
   
   include_once(PHPWG_ROOT_PATH . 'admin/include/functions.php');
   include_once(PHPWG_ROOT_PATH . 'admin/include/functions_upload.inc.php');
@@ -129,15 +131,16 @@ SELECT id FROM '.CATEGORIES_TABLE.'
   // do some updates
   if (!empty($params['fills']))
   {
-    $params['fills'] = rtrim($params['fills'], ',');
-    $params['fills'] = explode(',', $params['fills']);
+    $fills = rtrim($params['fills'], ',');
+    $fills = explode(',', $fills);
+    $fills = array_flip($fills);
   
     $updates = array();
-    if (in_array('fill_name', $params['fills']))        $updates['name'] = pwg_db_real_escape_string($photo['title']); 
-    if (in_array('fill_date', $params['fills']))        $updates['date_creation'] = date('Y-m-d H:i:s', $photo['timestamp']);
-    if (in_array('fill_author', $params['fills']))      $updates['author'] = pwg_db_real_escape_string($photo['author']);
-    if (in_array('fill_description', $params['fills'])) $updates['comment'] = pwg_db_real_escape_string($photo['description']);
-    if (in_array('fill_geotag', $params['fills']) and !empty($photo['latlon']))
+    if (isset($fills['fill_name']))        $updates['name'] = pwg_db_real_escape_string($photo['title']); 
+    if (isset($fills['fill_date']))        $updates['date_creation'] = date('Y-m-d H:i:s', $photo['timestamp']);
+    if (isset($fills['fill_author']))      $updates['author'] = pwg_db_real_escape_string($photo['author']);
+    if (isset($fills['fill_description'])) $updates['comment'] = pwg_db_real_escape_string($photo['description']);
+    if (isset($fills['fill_geotag']) and !empty($photo['latlon']))
     {
       $latlon = explode(' ', $photo['latlon']);
       if (count($latlon) == 2)
@@ -156,7 +159,7 @@ SELECT id FROM '.CATEGORIES_TABLE.'
         );
     }
     
-    if (!empty($photo['tags']) and in_array('fill_tags', $params['fills']))
+    if (!empty($photo['tags']) and isset($fills['fill_tags']))
     {
       set_tags(get_tag_ids($photo['tags']), $photo['image_id']);
     }
