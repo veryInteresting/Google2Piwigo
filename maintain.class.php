@@ -16,7 +16,7 @@ class Google2Piwigo_maintain extends PluginMaintain
 
     if (empty($conf['google2piwigo']))
     {
-      conf_update_param('google2piwigo', $conf['google2piwigo'], $this->default_conf);
+      conf_update_param('google2piwigo', $this->default_conf, true);
     }
 
     mkgetdir(PHPWG_ROOT_PATH . $conf['data_location'] . 'picasa_wa_cache/', MKGETDIR_DEFAULT&~MKGETDIR_DIE_ON_ERROR);
