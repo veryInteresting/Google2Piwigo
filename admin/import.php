@@ -8,8 +8,8 @@ include_once(PICASA_WA_PATH . 'include/functions.inc.php');
 // check API parameters and connect to flickr
 if (empty($conf['google2piwigo']['api_key']) or empty($conf['google2piwigo']['secret_key']))
 {
-  $page['warnings'][] = l10n('Please fill your API keys on the configuration tab');
-  $_GET['action'] = 'error';
+  $_SESSION['page_warnings'][] = l10n('Please fill your API keys on the configuration tab');
+  redirect(PICASA_WA_ADMIN . '-config');
 }
 else if (!test_remote_download())
 {
