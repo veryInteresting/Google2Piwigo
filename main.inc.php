@@ -10,11 +10,21 @@ Author URI: http://www.strangeplanet.fr
 
 defined('PHPWG_ROOT_PATH') or die('Hacking attempt!');
 
+if (basename(dirname(__FILE__)) != 'Google2Piwigo')
+{
+  add_event_handler('init', 'picasa_wa_error');
+  function picasa_wa_error()
+  {
+    global $page;
+    $page['errors'][] = 'Google2Piwigo folder name is incorrect, uninstall the plugin and rename it to "Google2Piwigo"';
+  }
+  return;
+}
+
 global $conf;
 
-define('PICASA_WA_ID',    basename(dirname(__FILE__)));
-define('PICASA_WA_PATH',  PHPWG_PLUGINS_PATH . PICASA_WA_ID . '/');
-define('PICASA_WA_ADMIN', get_root_url() . 'admin.php?page=plugin-' . PICASA_WA_ID);
+define('PICASA_WA_PATH',  PHPWG_PLUGINS_PATH . 'Google2Piwigo/');
+define('PICASA_WA_ADMIN', get_root_url() . 'admin.php?page=plugin-Google2Piwigo');
 define('PICASA_WA_CACHE', PHPWG_ROOT_PATH . $conf['data_location'] . 'picasa_wa_cache/');
 
 
