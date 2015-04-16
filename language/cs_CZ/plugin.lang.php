@@ -31,7 +31,6 @@ $lang['Import all photos in this album'] = 'Importovat všechny obrázky v tomto
 $lang['Import options'] = 'Nastavení importu';
 $lang['List my albums'] = 'Vypsat má alba';
 $lang['List pictures of this album'] = 'Vypsat obrázky tohoto alba';
-$lang['Logued as'] = 'Přihlášen jako';
 $lang['No download method available'] = 'Není k dispozici žádný způsob stahování';
 $lang['One picture is not displayed because already existing in the database.'] = 'Jeden obrázek není zobrazen, protože už je v databázi.';
 $lang['Open Google page in a new tab'] = 'Otevřít stránku Google v novém tabu';
@@ -44,5 +43,7 @@ $lang['API not authenticated'] = 'API neautentizováno';
 $lang['Logged out'] = 'Odhlášen';
 $lang['Photo "%s" imported'] = 'Foto "%s" naimportováno';
 $lang['Successfully logged to you Google account'] = 'Přihlášení na účet Google proběhlo úspěšně';
-$lang['Help! I get the error "The site [...] has not been registered."'] = 'Pomoc! Objevila se tato chyba "Stránka [...] nebyla registrována."';
-?>
+$lang['Callback URL'] = 'Zpětná adresa URL';
+$lang['Google project keys'] = 'Klíče k Google projektu';
+$lang['How do I get my Google project API key?'] = 'Jak získám klíče k Google projektu API?';
+$lang['Please fill your API keys on the configuration tab'] = 'Prosím vyplňte vaše API klíče v záložce konfigurace';
